@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>VivaIcon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.spotify.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -41,10 +41,10 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>Viva Update Signing Public Key.pem</string>
 	<key>SUFeedURL</key>
 	<string>http://ikennd.ac/misc/VivaUpdates.xml</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>Viva Update Signing Public Key.pem</string>
 	<key>SUScheduledCheckInterval</key>
 	<integer>86400</integer>
 </dict>

@@ -38,10 +38,10 @@
 		502F9F26155B0EDF0058BCE3 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F20155B0EDE0058BCE3 /* Growl.framework */; };
 		502F9F27155B0EDF0058BCE3 /* Scribbler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F22155B0EDE0058BCE3 /* Scribbler.framework */; };
 		502F9F28155B0EDF0058BCE3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F24155B0EDE0058BCE3 /* Sparkle.framework */; };
-		502F9F29155B0EF60058BCE3 /* BGHUDAppKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F1E155B0EDE0058BCE3 /* BGHUDAppKit.framework */; };
-		502F9F2A155B0EFA0058BCE3 /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F20155B0EDE0058BCE3 /* Growl.framework */; };
-		502F9F2B155B0EFE0058BCE3 /* Scribbler.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F22155B0EDE0058BCE3 /* Scribbler.framework */; };
-		502F9F2C155B0F010058BCE3 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F24155B0EDE0058BCE3 /* Sparkle.framework */; };
+		502F9F29155B0EF60058BCE3 /* BGHUDAppKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F1E155B0EDE0058BCE3 /* BGHUDAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		502F9F2A155B0EFA0058BCE3 /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F20155B0EDE0058BCE3 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		502F9F2B155B0EFE0058BCE3 /* Scribbler.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F22155B0EDE0058BCE3 /* Scribbler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		502F9F2C155B0F010058BCE3 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 502F9F24155B0EDE0058BCE3 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		503A7C2715E7C1B100D9FF18 /* VivaDraggableItemImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 503A7C2615E7C1B100D9FF18 /* VivaDraggableItemImageView.m */; };
 		503D62D913257D92007772CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503D62D813257D92007772CA /* Cocoa.framework */; };
 		503D62E313257D92007772CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 503D62E113257D92007772CA /* InfoPlist.strings */; };
@@ -71,7 +71,7 @@
 		50788FD314DD97590029E2D9 /* SPSession+AudioStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 50788FD214DD97590029E2D9 /* SPSession+AudioStatistics.m */; };
 		50842E52133A43B100528555 /* SPVolumeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50842E51133A43B100528555 /* SPVolumeSliderCell.m */; };
 		508812361402525E0094E748 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508812351402525E0094E748 /* Accelerate.framework */; };
-		5088AB5E140D2874009C9FF8 /* CocoaLibSpotify.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5088AB5B140D2863009C9FF8 /* CocoaLibSpotify.framework */; };
+		5088AB5E140D2874009C9FF8 /* CocoaLibSpotify.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5088AB5B140D2863009C9FF8 /* CocoaLibSpotify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5088AB5F140D28EC009C9FF8 /* CocoaLibSpotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5088AB5B140D2863009C9FF8 /* CocoaLibSpotify.framework */; };
 		50936FD3152C695C0099A55C /* VivaLinkTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 50936FD2152C695C0099A55C /* VivaLinkTextField.m */; };
 		5099D8AA1364B175005C7CDC /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099D8A81364B175005C7CDC /* AlbumViewController.m */; };
@@ -1427,7 +1427,7 @@
 		503D62CB13257D92007772CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Spotify;
 			};
 			buildConfigurationList = 503D62CE13257D92007772CA /* Build configuration list for PBXProject "Viva" */;
@@ -1774,13 +1774,18 @@
 		503D62F013257D92007772CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -1788,10 +1793,12 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -1800,21 +1807,27 @@
 		503D62F113257D92007772CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1837,6 +1850,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Viva-Libs/flac\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spotify.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1861,6 +1875,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Viva-Libs/flac\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spotify.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
